@@ -1,2 +1,16 @@
-# doria
- 
+# Doria
+
+Doria is a website that host a collection of online PVP games
+
+## Link
+
+## Contributing 
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+
