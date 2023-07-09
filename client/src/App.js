@@ -1,9 +1,13 @@
 import React from 'react'
+import SubscriptionWidget from './components/SubscriptionWidget';
+import './index.css'
 
-function App() {
+const App = () => {
   return (
-    <div>big apple</div>
+    <div>
+      <SubscriptionWidget />
+    </div>
   )
 }
 
-export default App
+export default App;
