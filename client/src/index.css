@@ -22,11 +22,11 @@ body {
   padding-left: 10px;
 }
 
-.wrapper {
+.wrapper-1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, 250px);
-  grid-auto-rows: minmax(250px, auto);
+  grid-auto-rows: minmax(100px, auto);
 }
 
 .text-0 {
@@ -34,21 +34,18 @@ body {
   grid-row: 1/2;
 }
 
-.text-1 {
-  grid-column: 2/3;
-  grid-row: 2/3;
+.subWrapper-1 {
+  grid-area: 2 / 2 / 3 / 3;
 }
 
-.text-2 {
-  grid-column: 3/4;
-  grid-row: 2/3;
+.text-4 {
+  grid-area: 3 / 2 / 4 / 3;
 }
 
-.text-3 {
-  grid-column: 4/5;
-  grid-row: 2/3;
+.subWrapper-2 {
+  grid-area: 4/2/5/3;
 }
 
-.mainBody {
-  color: aqua;
+div {
+  color: aliceblue;
 }
