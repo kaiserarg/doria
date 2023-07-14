@@ -2,8 +2,7 @@
 
 Welcome to Doria, your go-to platform for an exciting collection of Player vs Player (PvP) games online. Born out of a passion for competitive gaming and the desire to bring people together, Doria promises a unique, engaging and fun-filled experience for players of all ages.
 
-![Doria Icon](/client/src/assets/doria-icon.png)
-![Doria Screenshot](/client/src/assets/doria-text.png)
+![Doria Icon](/client/src/assets/doria-icon.png)[Doria Screenshot](/client/src/assets/doria-text.png)
 
 ## About
 
