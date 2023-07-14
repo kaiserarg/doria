@@ -2,8 +2,10 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
+const subscribeRouter = require('./routes/subscribe');
+const cors = require('cors');
 
-const port = 8000;
+const port = 5000;
 
 const username = process.env.DB_USERNAME;
 const password = process.env.DB_PASSWORD;
@@ -21,5 +23,9 @@ async function connect() {
 }
 
 connect();
+
+app.use(cors());
+app.use(express.json());
+app.use('/subscribe', subscribeRouter);
 
 app.listen(port, () => console.log(`Server started on port ${port}`));
