@@ -37,7 +37,7 @@ const SubscriptionWidget = () => {
                             />
                         </div>
                         <div className='btn'>
-                            <button type='submit'>Subscribe</button>
+                            <button type='submit'>Join the Waitlist</button>
                         </div> 
                     </div>
                 </div>

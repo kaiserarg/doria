@@ -24,8 +24,8 @@ body {
 
 .wrapper-1 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, 250px);
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  grid-template-rows: repeat(5, 200px);
   grid-auto-rows: minmax(100px, auto);
 }
 
@@ -36,16 +36,74 @@ body {
 
 .subWrapper-1 {
   grid-area: 2 / 2 / 3 / 3;
+  align-items: center;
+}
+
+.text-1 {
+  text-align: center;
+  padding-bottom: 40px;
+  background: linear-gradient(to right, #b69fc9, #66179b);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400px 10px;
+  font-weight: bold;
+}
+
+.text-2 {
+  text-align: center;
+  padding-bottom: 40px;
+  font-size: xx-large;
+}
+
+.text-3 {
+  text-align: center;
+  font-size: xx-large;
+  background: linear-gradient(to right, #a284bb, #66179b);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400px 10px;
+  font-weight: bold;
 }
 
 .text-4 {
   grid-area: 3 / 2 / 4 / 3;
+  text-align: center;
+  padding-top: 50px;
 }
 
 .subWrapper-2 {
   grid-area: 4/2/5/3;
 }
 
+.emailInput {
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.emailInput input {
+  width: 30%;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  text-indent: 40px;
+  font-size: 20px;
+}
+
+.btn {
+  text-align: center;
+}
+
+.btn button {
+  width: 30%;
+  height: 45px;
+  border-radius: 8px;
+  background-color: #66179b;
+  border: none;
+  font-size: 20px;
+}
+
 div {
   color: aliceblue;
 }
+
