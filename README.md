@@ -1,7 +1,8 @@
-# Doria.app
+# doria.app
 
 Welcome to Doria, your go-to platform for an exciting collection of Player vs Player (PvP) games online. Born out of a passion for competitive gaming and the desire to bring people together, Doria promises a unique, engaging and fun-filled experience for players of all ages.
 
+![Doria Icon](/client/src/assets/doria-icon.png)
 ![Doria Screenshot](/client/src/assets/doria-text.png)
 
 ## About
@@ -20,7 +21,7 @@ From high-stakes strategy games to lighthearted quizzes, Doria offers a broad pa
 
 ## Live Link
 
-Explore Doria and join the fun today! Visit [Live Link](#)
+Explore Doria and join the fun today! Visit [doria.app](doria.app)
 
 ## Getting Started
 
@@ -44,8 +45,8 @@ Please make sure to update tests as appropriate and adhere to the guidelines
 
 ## License
 
-Doria is released under  "TBD"
+Doria is released under "TBD"
 
 ## Contact
 
-Feel free to reach out if you have any questions or suggestions. You can drop us an email at [bhuang8450@gmail.com](mailto:bhuang8450@gmail.com)
+Feel free to reach out if you have any questions or suggestions. You can drop us an email at [brad@doria.app](mailto:brad@doria.app) or [zhifeng@doria.app](mailto:zhifeng@doria.app)
