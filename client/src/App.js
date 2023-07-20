@@ -1,13 +1,13 @@
 import React from 'react'
-import SubscriptionWidget from './components/SubscriptionWidget';
 import Navbar from './components/Navbar';
+import CreateLobby from './components/CreateLobby';
 import './index.css'
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <SubscriptionWidget />
+      <CreateLobby />
     </div>
   )
 }

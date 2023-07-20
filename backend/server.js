@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const subscribeRouter = require('./routes/subscribe');
+const lobbyRouter = require('./routes/lobby');
 const cors = require('cors');
 
 const port = 5000;
@@ -27,5 +28,6 @@ connect();
 app.use(cors());
 app.use(express.json());
 app.use('/subscribe', subscribeRouter);
+app.use('/lobbies', lobbyRouter);
 
 app.listen(port, () => console.log(`Server started on port ${port}`));
