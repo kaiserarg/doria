@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 const LobbyComponent = () => {
     const [lobbyCode, setLobbyCode] = useState("");
+    const [userName, setUserName] = useState("");
     const [message, setMessage] = useState("");
 
     const handleJoin = async (e) => {
@@ -48,12 +49,23 @@ const LobbyComponent = () => {
                 <p className="text-2xl font-bold text-center text-white">Join a Lobby</p>
                 <input 
                     type="text" 
+                    maxLength={"5"}
                     placeholder="Enter lobby code" 
                     value={lobbyCode}
                     onChange={e => setLobbyCode(e.target.value)}
                     className="w-full px-3 py-2 text-black placeholder-gray-500 bg-white rounded"
                 />
+                <input
+                    type="text"
+                    placeholder="Enter username"
+                    value={userName}
+                    onChange={e => setUserName(e.target.value)}
+                    className="w-full px-3 py-2 text-black placeholder-gray-500 bg-white rounded"
+                />
                 <button className="w-full px-3 py-2 text-white bg-purple-500 rounded hover:bg-purple-600">
+                    Generate Username
+                </button>
+                <button className="w-full px-3 py-2 text-white bg-green-500 rounded hover:bg-green-600">
                     Join Lobby
                 </button>
             </form>

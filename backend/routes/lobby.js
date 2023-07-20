@@ -1,3 +1,4 @@
+const e = require('express');
 const express = require('express');
 const mongoose = require('mongoose');
 const router = express.Router();
@@ -31,9 +32,10 @@ router.get('/:code', async (req, res) => {
       res.status(404).json({ error: "Lobby not found" });
       return;
     }
-
-    //TODO: Check if max users reached (4)
-
+    else if (lobby.users.length >= 4) {
+      res.status(405).json({error: "Lobby is full"});
+      return;
+    }
     res.json({ message: "Lobby joined successfully" });
   } catch (error) {
     console.error(error);
