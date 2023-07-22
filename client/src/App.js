@@ -1,13 +1,13 @@
 import React from 'react'
-import Navbar from './components/Navbar';
-import CreateLobby from './components/CreateLobby';
+import HeaderLogo from './components/HeaderLogo'
+import MakeLobby from './components/MakeLobby'
 import './index.css'
 
 const App = () => {
   return (
     <div>
-      <Navbar />
-      <CreateLobby />
+      <HeaderLogo />
+      <MakeLobby />
     </div>
   )
 }

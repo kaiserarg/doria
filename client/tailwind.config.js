@@ -4,12 +4,29 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'rubik': ['Rubik', 'sans-serif'],
+      },
+    },
   },
-  plugins: [require("daisyui")],
   daisyui: {
-    themes: ["light", "dark", "synthwave", "retro", "dracula"],
-  },
+    themes: [{
+          mytheme: {      
+          "primary": "#8370FB",    
+          "secondary": "#EFDFFC",    
+          "accent": "#AABDED",      
+          "neutral": "#f8dd99",     
+          "base-100": "#ffffff",       
+          "info": "#00000",     
+          "success": "#00000",      
+          "warning": "#00000",     
+          "error": "#00000",
+          },
+        },
+      ],
+    },
 
+  plugins: [require("daisyui")],
 }
 
