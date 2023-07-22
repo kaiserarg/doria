@@ -43,8 +43,8 @@ const LobbyComponent = () => {
 
     return (
         <div>
-            <div className="w-5/12 h-64 bg-secondary rounded-3xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)]">
-                <div className='text-black text-xl font-bold'>
+            <div className="grid-cols-1 w-5/12 h-64 bg-secondary rounded-3xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)] ">
+                <div className='text-black text-2xl font-rubik font-semibold'>
                     ROOM CODE
                 </div>
                 <form onSubmit={handleJoin}>
@@ -54,13 +54,14 @@ const LobbyComponent = () => {
                         placeholder="5 - LETTER CODE" 
                         value={lobbyCode}
                         onChange={e => setLobbyCode(e.target.value)}
-                        className="w-10/12 px-3 py-2 no-animation text-xl text-black font-bold placeholder-gray-400  bg-white rounded-2xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)]"
+                        className="w-10/12 h-12 px-3 py-2 no-animation text-2xl text-black font-rubik font-semibold placeholder-gray-400  bg-white rounded-2xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)]"
                     />
                     <div>
-                        <button className="btn btn-primary text-xl text-white rounded-2xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)]">Join Game</button>
+                        <button className="bg-primary w-5/12 h-14 text-2xl font-rubik font-semibold text-white rounded-2xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)]">Join Game</button>
                     </div>
                 </form>
             </div>
+            <button onClick={handleCreate} className="bg-white w-5/12 h-14 text-2xl font-rubik font-semibold text-primary rounded-2xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)]">Create Game</button>
         </div>
     );
 };
