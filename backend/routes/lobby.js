@@ -5,7 +5,7 @@ const router = express.Router();
 
 const lobbySchema = new mongoose.Schema({
   code: String,
-  users: [String],
+  users: [],
 }, { collection: 'lobbies' });
 
 const Lobby = mongoose.model('Lobby', lobbySchema);
@@ -13,7 +13,7 @@ const Lobby = mongoose.model('Lobby', lobbySchema);
 router.post('/create', async (req, res) => {
   const lobby = new Lobby({
     code: Math.random().toString(36).substring(2, 7).toUpperCase(),
-    users: [req.body.username],
+    users: [],
   });
 
   try {

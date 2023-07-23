@@ -10,7 +10,6 @@ const App = () => {
     <div>
       <HeaderLogo />
       <MakeLobby/>
-      <CreateUser />
       <Footer />
     </div>
   )

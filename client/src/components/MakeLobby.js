@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 const LobbyComponent = () => {
     const [lobbyCode, setLobbyCode] = useState("");
-    const [message, setMessage] = useState("");
 
     const handleJoin = async (e) => {
         e.preventDefault();
@@ -10,13 +9,13 @@ const LobbyComponent = () => {
         try {
             const response = await fetch(`http://localhost:5000/lobbies/${lobbyCode}`);
             if (response.status === 200) {
-                setMessage("Successfully joined lobby!");
+                console.log("Successfully joined lobby!");
             } else {
-                setMessage("Failed to join lobby.");
+                console.log("Failed to join lobby.");
             }
         } catch (error) {
             console.error(error);
-            setMessage("Failed to join lobby.");
+            console.log("Failed to join lobby.");
         }
     };
 
@@ -31,13 +30,13 @@ const LobbyComponent = () => {
 
             const data = await response.json();
             if (response.status === 200) {
-                setMessage(`Lobby created! Your lobby code is ${data.lobbyCode}`);
+                console.log(`Lobby created! Your lobby code is ${data.lobbyCode}`);
             } else {
-                setMessage("Failed to create lobby.");
+                console.log("Failed to create lobby.");
             }
         } catch (error) {
             console.error(error);
-            setMessage("Failed to create lobby.");
+            console.log("Failed to create lobby.");
         }
     };
 
