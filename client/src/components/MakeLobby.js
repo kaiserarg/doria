@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const LobbyComponent = () => {
+const MakeLobby = ({ setIsLobbyActive, setCurrentLobbyCode }) => {
     const [lobbyCode, setLobbyCode] = useState("");
 
     const handleJoin = async (e) => {
@@ -10,6 +10,8 @@ const LobbyComponent = () => {
             const response = await fetch(`http://localhost:5000/lobbies/${lobbyCode}`);
             if (response.status === 200) {
                 console.log("Successfully joined lobby!");
+                setCurrentLobbyCode(lobbyCode);
+                setIsLobbyActive(false);  // hide lobby and show CreateUser
             } else {
                 console.log("Failed to join lobby.");
             }
@@ -31,6 +33,9 @@ const LobbyComponent = () => {
             const data = await response.json();
             if (response.status === 200) {
                 console.log(`Lobby created! Your lobby code is ${data.lobbyCode}`);
+                setCurrentLobbyCode(data.lobbyCode);
+                setIsLobbyActive(false);  // hide lobby and show CreateUser
+
             } else {
                 console.log("Failed to create lobby.");
             }
@@ -56,13 +61,13 @@ const LobbyComponent = () => {
                         className="w-10/12 h-12 px-3 py-2 no-animation text-2xl text-black font-rubik font-semibold placeholder-gray-400  bg-white rounded-2xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)]"
                     />
                     <div>
-                        <button className="bg-primary w-5/12 h-14 text-2xl font-rubik font-semibold text-white rounded-2xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)]">Join Game</button>
+                        <button className="btn bg-primary w-5/12 h-14 text-white rounded-2xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)]">Join Game</button>
                     </div>
                 </form>
             </div>
-            <button onClick={handleCreate} className="bg-white w-5/12 h-14 text-2xl font-rubik font-semibold text-primary rounded-2xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)]">Create Game</button>
+            <button onClick={handleCreate} className="btn bg-white w-5/12 h-14 text-primary rounded-2xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)]">Create Game</button>
         </div>
     );
 };
 
-export default LobbyComponent;
+export default MakeLobby;

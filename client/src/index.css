@@ -2,3 +2,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply font-rubik transform active:scale-95 transition-transform text-2xl font-semibold;
+  }
+}
