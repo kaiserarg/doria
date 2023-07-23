@@ -46,9 +46,9 @@ const MakeLobby = ({ setIsLobbyActive, setCurrentLobbyCode }) => {
     };
 
     return (
-        <div>
-            <div className="grid-cols-1 w-5/12 h-64 bg-secondary rounded-3xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)] ">
-                <div className='text-black text-2xl font-rubik font-semibold'>
+        <div className='flex flex-col justify-center items-center w-6/12 h-full'>
+            <div className=" flex flex-col justify-center items-center w-3/4 h-full bg-secondary rounded-3xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)] ">
+                <div className=' self-start ml-52 mt-2 text-black text-2xl font-rubik font-semibold'>
                     ROOM CODE
                 </div>
                 <form onSubmit={handleJoin}>
@@ -58,14 +58,14 @@ const MakeLobby = ({ setIsLobbyActive, setCurrentLobbyCode }) => {
                         placeholder="5 - LETTER CODE" 
                         value={lobbyCode}
                         onChange={e => setLobbyCode(e.target.value)}
-                        className="w-10/12 h-12 px-3 py-2 no-animation text-2xl text-black font-rubik font-semibold placeholder-gray-400  bg-white rounded-2xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)]"
+                        className="mx-10 my-5 w-10/12 h-12 px-3 py-2 no-animation text-2xl text-black font-rubik font-semibold placeholder-gray-400  bg-white rounded-2xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)]"
                     />
-                    <div>
-                        <button className="btn bg-primary w-5/12 h-14 text-white rounded-2xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)]">Join Game</button>
+                    <div className='flex flex-col items-center'>
+                        <button className=" my-5 btn bg-primary w-5/12 h-14 text-white rounded-2xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)]">Join Game</button>
                     </div>
                 </form>
             </div>
-            <button onClick={handleCreate} className="btn bg-white w-5/12 h-14 text-primary rounded-2xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)]">Create Game</button>
+            <button onClick={handleCreate} className="m-10 btn bg-white w-5/12 h-14 text-primary rounded-2xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)]">Create Game</button>
         </div>
     );
 };

@@ -43,4 +43,19 @@ router.get('/:code', async (req, res) => {
   }
 });
 
+router.put('/:code/addUser', async (req, res) => {
+  try {
+    const lobby = await Lobby.findOne({ code: req.params.code });
+    if (lobby) {
+        lobby.users.push(req.body.username);
+        await lobby.save();
+        res.sendStatus(200);
+    } else {
+        res.sendStatus(404);
+    }
+} catch (error) {
+    console.error(error);
+    res.sendStatus(500);
+}});
+
 module.exports = router;
