@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 // Define the schema for the emails
 const emailSchema = new mongoose.Schema({
   email: String
-}, { collection: 'emails' }); // specify the 'email' collection
+}, { collection: 'emails' });
 
 // Create the model for the emails
 const Email = mongoose.model('Email', emailSchema);
