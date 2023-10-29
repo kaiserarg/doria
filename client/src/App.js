@@ -1,8 +1,10 @@
 import React, {useState} from "react";
-import HeaderLogo from './components/HeaderLogo'
-import MakeLobby from './components/MakeLobby'
-import Footer from './components/Footer'
-import CreateUser from './components/CreateUser'
+import HeaderLogo from './Deprecated/HeaderLogo'
+import MakeLobby from './Deprecated/MakeLobby'
+import Footer from './Deprecated/Footer'
+import CreateUser from './Deprecated/CreateUser'
+import PlayerCard from "./components/PlayerCard";
+import MainFrame from "./components/MainFrame";
 import './index.css'
 
 const App = () => {
@@ -26,9 +28,7 @@ const App = () => {
 
   return (
     <div>
-      <div className=" flex flex-col items-center"><HeaderLogo /></div>
-      {checkLobbyActive()} 
-      <div className=" sticky bottom-0"><Footer /></div>
+      <div className=""><MainFrame /></div>
     </div>
   );
 }

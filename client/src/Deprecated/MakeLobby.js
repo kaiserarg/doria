@@ -46,7 +46,7 @@ const MakeLobby = ({ setIsLobbyActive, setCurrentLobbyCode }) => {
     };
 
     return (
-        <div className='flex flex-col justify-center items-center pt-24'>
+        <div className='flex flex-col justify-center items-center pt -24'>
             <div className="flex flex-col justify-center items-center w-2/5 h-auto bg-secondary rounded-3xl border-4 border-black shadow-[7px_7px_0px_0px_rgba(0,0,0)] ">
                 <div className='self-start pt-7 pb-3 pl-20 text-black text-2xl font-rubik font-semibold'>
                     ROOM CODE
