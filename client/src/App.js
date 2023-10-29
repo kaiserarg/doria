@@ -28,7 +28,7 @@ const App = () => {
 
   return (
     <div>
-      <div className=""><MainFrame /></div>
+      <div><MainFrame /></div>
     </div>
   );
 }
