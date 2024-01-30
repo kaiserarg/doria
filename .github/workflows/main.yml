@@ -1,0 +1,26 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    # Build and test backend
+    - name: Build Backend Docker Image
+      run: |
+        cd backend
+        docker build -t my-backend .
+
+    # Build and test frontend
+    - name: Build Frontend Docker Image
+      run: |
+        cd frontend
+        docker build -t my-frontend .
