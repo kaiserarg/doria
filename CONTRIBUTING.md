@@ -25,6 +25,6 @@ This section guides you through submitting an enhancement suggestion for Doria A
 
 ## Questions or Concerns?
 
-If you have any questions or concerns about contributing, please feel free to reach out to the maintainers.
+If you have any questions or concerns about contributing, please feel free to reach out to the brad@doria.app or zhifeng@doria.app
 
 **Happy Coding!**
