@@ -1,4 +1,5 @@
 # doria.app
+[![Build and Deploy](https://github.com/kaiserarg/doria/actions/workflows/main.yml/badge.svg)](https://github.com/kaiserarg/doria/actions/workflows/main.yml)
 
 ## Description
 
