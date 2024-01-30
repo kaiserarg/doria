@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainPage from './MainPage';
 import Lobby from './Lobby';
 import Game from './Game';
-import AnagramArena from './AnagramArena'; // Import your game components
+import AnagramArena from './AnagramArena';
 
 function App() {
   return (

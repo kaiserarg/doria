@@ -17,11 +17,9 @@ const [games, setGames] = useState([]);
     <div>
         Game session: {id}
         <h3>Select a Game</h3>
-        <ul>
-            {games.map(game => (
-              <li key={game} onClick={() => selectGame(game)}>{game}</li>
-            ))}
-        </ul>
+        {games.map(game => (
+          <button key={game} onClick={() => selectGame(game)}>{game}</button>
+        ))}
     </div>
   );
 }
