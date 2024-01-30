@@ -1,6 +1,8 @@
-# Doria App
+# doria.app
 
 ## Description
+
+![Doria Screenshot](dorialogo.png)
 
 Doria App is a competitive, multiplayer web application featuring a variety of word and puzzle games. This project showcases real-time interaction, backend logic, efficient data handling, and a user-friendly interface for an engaging gaming experience.
 
@@ -74,10 +76,6 @@ Contributions to Doria App are welcome! Please read our [contributing guidelines
 ## License
 
 This project is licensed under the [MIT License](LICENSE.md).
-
-## Acknowledgements
-
-- [List any third-party assets, libraries, or inspiration sources here]
 
 ## FAQs
 
