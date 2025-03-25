@@ -1,4 +1,19 @@
-// frontend/src/AnagramArena.jsx
+/**
+ * AnagramArena Component
+ *
+ * This component displays a main anagram word and allows users to submit their own words
+ * to earn points. It also shows a list of players and their scores.
+ *
+ * Props:
+ *   @param {string} gameId - The unique identifier for the current game instance.
+ *
+ * State:
+ *   - players (object): Contains each player's ID and score.
+ *   - currentWord (string): The main word used for creating anagrams.
+ *   - playerInput (string): Holds the user’s current guess.
+ *   - error (string): Displays any error message from the server.
+ */
+
 import React, { useState, useEffect } from 'react';
 
 function AnagramArena({ gameId }) {
@@ -7,7 +22,7 @@ function AnagramArena({ gameId }) {
   const [playerInput, setPlayerInput] = useState('');
   const [error, setError] = useState('');
 
-  // Fetch game state from the server
+  // Fetch the current game state when the component mounts or when gameId changes
   useEffect(() => {
     const fetchGameState = async () => {
       try {
@@ -15,14 +30,14 @@ function AnagramArena({ gameId }) {
         const data = await response.json();
         setCurrentWord(data.currentWord);
         setPlayers(data.players);
-      } catch (error) {
-        console.error('Error fetching game state:', error);
+      } catch (err) {
+        console.error('Error fetching game state:', err);
       }
     };
-
     fetchGameState();
   }, [gameId]);
 
+  // Send the player's guess to the server
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -31,16 +46,17 @@ function AnagramArena({ gameId }) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ word: playerInput })
       });
-
       const data = await response.json();
+
       if (data.success) {
-        setPlayers(data.players); // Update players' scores
-        setPlayerInput(''); // Reset input field
+        setPlayers(data.players);
+        setPlayerInput('');
+        setError('');
       } else {
-        setError(data.message); // Show error message from server
+        setError(data.message);
       }
-    } catch (error) {
-      console.error('Error submitting word:', error);
+    } catch (err) {
+      console.error('Error submitting guess:', err);
     }
   };
 
