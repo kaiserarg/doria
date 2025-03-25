@@ -5,7 +5,7 @@
 
 ![Doria Screenshot](dorialogo.png)
 
-Doria App is a competitive, multiplayer web application featuring a variety of word and puzzle games. This project showcases real-time interaction, backend logic, efficient data handling, and a user-friendly interface for an engaging gaming experience.
+Doria App is a web multiplayer party game app
 
 ## Games Included
 
@@ -68,7 +68,6 @@ The application should now be running on `http://localhost:3000`.
 
 - Create or join game rooms through the Lobby.
 - Choose from a variety of games.
-- Compete with others and enjoy real-time gameplay.
 
 ## Contributing
 
